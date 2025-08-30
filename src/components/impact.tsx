@@ -28,7 +28,9 @@ const Impact = () => {
         },
         i * 2
       );
+    });
 
+    rightItems.forEach((_, i) => {
       // scroll right up (opposite direction)
       tl.to(
         rightRef.current,

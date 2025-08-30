@@ -1,4 +1,3 @@
-import { section } from "framer-motion/client";
 import React from "react";
 import SideCTA from "./ui/sideCTA";
 

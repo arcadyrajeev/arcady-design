@@ -8,7 +8,6 @@ interface CtaProps {
   text?: string;
   icon?: number;
   iconWrapper?: string;
-  iconTranslate?: string;
   shineSize?: string;
 }
 
@@ -19,7 +18,6 @@ const SideCTA: React.FC<CtaProps> = ({
   text = "text-[0.9rem]",
   icon = 20,
   iconWrapper = "w-5 h-full",
-  iconTranslate = "group-hover:translate-x-[50%]",
   shineSize = "h-20 w-60",
 }) => {
   return (

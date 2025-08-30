@@ -1,6 +1,5 @@
 import MainCTA from "./ui/mainCTA";
 import SideCTA from "./ui/sideCTA";
-import BlackButton from "./ui/blackButton";
 
 import Image from "next/image";
 
