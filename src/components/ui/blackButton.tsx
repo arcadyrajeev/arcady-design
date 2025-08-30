@@ -1,66 +1,35 @@
 import Link from "next/link";
 
-type CtaSize = "xs" | "sm" | "md" | "lg" | "xl";
-
 interface CtaProps {
   label: string;
   destination: string;
-  size?: CtaSize; // optional, defaults to "md"
+  buttonSize?: string;
+  text?: string;
+  shineSize?: string;
+  desc?: string;
 }
-
-const CTA_SIZES: Record<
-  CtaSize,
-  {
-    button: string;
-    text: string;
-    shineSize: string;
-  }
-> = {
-  xs: {
-    button: "w-32 h-8",
-    text: "text-[0.8rem]",
-    shineSize: "h-15 w-40",
-  },
-  sm: {
-    button: "w-40 h-10",
-    text: "text-[0.92rem]",
-    shineSize: "h-20 w-40",
-  },
-  md: {
-    button: "w-48 h-12",
-    text: "text-[1.12rem]",
-    shineSize: "h-30 w-50",
-  },
-  lg: {
-    button: "w-64 h-16",
-    text: "text-[1.4rem]",
-    shineSize: "h-35 w-60",
-  },
-  xl: {
-    button: "w-76 h-18",
-    text: "text-[1.8rem]",
-    shineSize: "h-40 w-70",
-  },
-};
 
 const BlackButton: React.FC<CtaProps> = ({
   label,
   destination,
-  size = "md",
+  buttonSize = "w-30 h-7",
+  text = "text-[0.6rem]",
+  shineSize = "h-15 w-40",
+  desc = "",
 }) => {
-  const cfg = CTA_SIZES[size];
-
   return (
     <Link
       href={destination}
-      target="blank"
-      className={`${cfg.button} group flex items-center text-white justify-center p-[1.5px] rounded-[100vw]  borderstyle`}
+      className={`${buttonSize} group flex items-center text-white justify-center p-[1px] rounded-[100vw]  borderstyle opacity-[0.7] hover:opacity-[1] transition-opacity duration-260 ease-in-out`}
+      aria-label={`${label} – ${desc}`}
     >
-      <div className="flex overflow-hidden relative w-full h-full bg-black items-center justify-center rounded-[100vw]">
+      <div className="flex px-auto overflow-hidden relative w-full h-full bg-black items-center justify-center rounded-[100vw]">
         <div
-          className={`${cfg.shineSize} buttonShine group-hover:rounded-[10vw] group-hover:scale-[1.2]`}
+          aria-hidden="true"
+          className={`${shineSize} buttonShine group-hover:rounded-[10vw] group-hover:scale-[1.2]`}
         ></div>
-        <h1 className={`${cfg.text} fontheading2 tracking-wider `}>{label}</h1>
+        <span className={`${text} fontheading2 tracking-wider `}>{label}</span>
+        <span className="sr-only">{desc}</span>
       </div>
     </Link>
   );

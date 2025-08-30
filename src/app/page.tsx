@@ -1,10 +1,17 @@
-import Image from "next/image";
+// app/page.tsx
+
+import CaseStudy from "@/components/caseStudy";
 import Hero from "@/components/hero";
+import Impact from "@/components/impact";
+import ScrollDown from "@/components/scrollDown";
 
 export default function Home() {
   return (
-    <div className="flex h-full items-center justify-center">
+    <div className="bg-transparent">
       <Hero />
+      <ScrollDown />
+      <Impact />
+      <CaseStudy />
     </div>
   );
 }
