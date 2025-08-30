@@ -61,7 +61,7 @@ const Impact = () => {
 
   return (
     <section
-      className="flex flex-col w-full h-[100dvh] py-10 bg-background-primary items-center justify-between mt-10"
+      className="flex flex-col w-full h-[100dvh] py-10 bg-background-primary items-center justify-between mt-20"
       id="impact"
     >
       <div>

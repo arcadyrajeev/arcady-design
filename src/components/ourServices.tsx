@@ -2,14 +2,14 @@ import DualCard from "./ui/dualCard";
 
 const services = [
   {
-    imgLink: "/images/brand.png",
+    imgLink: "/images/brand2.png",
     title: "Brand Design",
     desc: "We create bold, future-ready brand identities that inspire trust and credibility in fintech and tech spaces. From logo to visual systems, every detail is built for recognition and investor confidence.",
     orientation: "flex-row",
     link: "/",
   },
   {
-    imgLink: "/images/web.png",
+    imgLink: "/images/web1.png",
     title: "Website Design & Development",
     desc: "Your website is your first pitch. We hand-code fast, secure, and scalable websites that deliver performance, clarity, and seamless experiences across devices, tailored for growth.",
     orientation: "flex-row-reverse",
@@ -30,7 +30,7 @@ const services = [
     link: "/",
   },
   {
-    imgLink: "/images/user.png",
+    imgLink: "/images/user1.png",
     title: "User Flow",
     desc: "We design user journeys that make financial products seamless. Every interaction is optimized to reduce friction, build trust, and keep customers engaged for the long term.",
     orientation: "flex-row",

@@ -9,12 +9,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Header = () => {
   const headerRef = useRef<HTMLDivElement>(null);
+  const callRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     if (!headerRef.current) return;
 
     const tl = gsap.timeline({ paused: true });
+    const tl2 = gsap.timeline({ paused: true });
 
     // Timeline animation
     tl.fromTo(
@@ -31,10 +33,24 @@ const Header = () => {
       }
     );
 
+    tl.fromTo(
+      callRef.current,
+      {
+        opacity: 0,
+        pointerEvents: "none",
+      },
+      {
+        opacity: 1,
+        pointerEvents: "auto",
+        duration: 0.4,
+        ease: "power2.out",
+      }
+    );
+
     // Create scroll trigger instance
     const trigger = ScrollTrigger.create({
       trigger: "#hero",
-      start: "top+=400 top",
+      start: "top+=300 top",
       onEnter: () => tl.play(),
       onLeaveBack: () => tl.reverse(),
     });
@@ -100,19 +116,21 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-5">
-          <MainCTA
-            label="Book a Call"
-            destination="/"
-            size="w-32 h-8"
-            fontSize="text-[0.8rem]"
-            bullet="w-2 h-2"
-            icon={20}
-          />
           <div className="group flex flex-col w-9 h-8  cursor-pointer p-2 justify-between">
             <div className="w-full h-[2px] backdrop-invert rounded-lg group-hover:scale-x-70 w-0 transition-scale origin-center duration-300 ease-in-out"></div>
             <div className="w-full h-[2px] backdrop-invert rounded-lg group-hover:scale-x-70 w-0 transition-scale origin-center duration-300 ease-in-out"></div>
             <div className="w-full h-[2px] backdrop-invert rounded-lg group-hover:scale-x-70 w-0 transition-scale origin-center duration-300 ease-in-out"></div>
           </div>
+        </div>
+        <div ref={callRef} className="flex absolute top-[1100%] right-[4%]">
+          <MainCTA
+            label="Book a Call"
+            destination="/"
+            size="w-40 h-14"
+            fontSize="text-[0.9rem]"
+            bullet="w-2 h-2"
+            icon={20}
+          />
         </div>
       </header>
     </>

@@ -38,10 +38,11 @@ const DualCard: React.FC<cardProps> = ({
           </p>
           <div className="w-fit h-fit mt-auto ">
             <MainCTA
-              label="Learn more"
+              label="EXPLORE MORE"
               destination={buttonlink}
-              size="w-50 h-10"
-              bullet="w-3 h-3"
+              size="w-50 h-15"
+              fontSize="text-[1rem]"
+              bullet="w-2 h-2"
             />
           </div>
         </div>
