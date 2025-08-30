@@ -15,7 +15,6 @@ const Header = () => {
     if (!headerRef.current) return;
 
     const tl = gsap.timeline({ paused: true });
-    const tl2 = gsap.timeline({ paused: true });
 
     // Timeline animation
     tl.fromTo(
