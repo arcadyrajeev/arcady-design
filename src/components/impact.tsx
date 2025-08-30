@@ -66,7 +66,7 @@ const Impact = () => {
     >
       <div>
         <h1 className="fontheading2 text-secondary text-[1rem]">
-          Trusted by Fintech & SaaS Leaders
+          Trusted by Visionary Fintech & SaaS Leaders
         </h1>
       </div>
       <div className="w-full overflow-hidden h-[7rem] flex  justify-center gap-10">
