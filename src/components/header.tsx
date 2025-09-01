@@ -13,6 +13,7 @@ const Header = () => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    const mm = gsap.matchMedia();
     if (!headerRef.current) return;
 
     const tl = gsap.timeline({ paused: true });
@@ -33,19 +34,21 @@ const Header = () => {
       }
     );
 
-    tl.fromTo(
-      callRef.current,
-      {
-        opacity: 0,
-        pointerEvents: "none",
-      },
-      {
-        opacity: 1,
-        pointerEvents: "auto",
-        duration: 0.4,
-        ease: "power2.out",
-      }
-    );
+    mm.add("(min-width: 1280px)", () => {
+      tl.fromTo(
+        callRef.current,
+        {
+          opacity: 0,
+          pointerEvents: "none",
+        },
+        {
+          opacity: 1,
+          pointerEvents: "auto",
+          duration: 0.4,
+          ease: "power2.out",
+        }
+      );
+    });
 
     // Create scroll trigger instance
     const trigger = ScrollTrigger.create({
@@ -66,7 +69,7 @@ const Header = () => {
     <>
       <header className="fixed top-0 w-full h-fit z-99  flex w-full items-center justify-between px-15 py-3">
         {/* Logo */}
-        <div className=" flex items-center">
+        <Link href={"/"} className=" flex items-center">
           <Image
             src="/images/logo-white.svg"
             alt="Arcady Logo"
@@ -75,21 +78,21 @@ const Header = () => {
             priority
             className="h-5 w-auto"
           />
-        </div>
+        </Link>
 
         {/* Navigation */}
         <nav ref={headerRef} className="flex gap-10 ml-10 ">
           <div className="bg-gray-700 rounded-[100vw]">
             <BlackButton
               label="Brand Design"
-              destination="/"
+              destination="/brand"
               desc="Services for Fintech & SaaS"
             />
           </div>
           <div className="bg-gray-700 rounded-[100vw]">
             <BlackButton
               label="SaaS Design"
-              destination="/"
+              destination="/saas"
               desc="UX/UI for SaaS Platforms"
             />
           </div>
@@ -97,7 +100,7 @@ const Header = () => {
           <div className="bg-gray-700 rounded-[100vw]">
             <BlackButton
               label="Website Design"
-              destination="/"
+              destination="/website"
               desc="High-performance Business Websites"
             />
           </div>
@@ -122,7 +125,10 @@ const Header = () => {
             <div className="w-full h-[2px] backdrop-invert rounded-lg group-hover:scale-x-70 w-0 transition-scale origin-center duration-300 ease-in-out"></div>
           </div>
         </div>
-        <div ref={callRef} className="flex absolute top-[1100%] right-[4%]">
+        <div
+          ref={callRef}
+          className="hidden md:flex absolute md:top-[120%] xl:top-[1100%] right-[4%]"
+        >
           <MainCTA
             label="Book a Call"
             destination="/"

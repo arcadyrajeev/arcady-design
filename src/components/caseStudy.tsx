@@ -15,6 +15,7 @@ const CaseStudy = () => {
           text="text-[1.2rem]"
           button="w-90 h-14"
           shineSize="w-100 h-30"
+          icon={30}
         />
       </div>
     </section>

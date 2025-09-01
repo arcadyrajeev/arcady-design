@@ -23,7 +23,6 @@ const SideCTA: React.FC<CtaProps> = ({
   return (
     <Link
       href={destination}
-      target="blank"
       className={`${button} group flex items-center text-white justify-center p-[2px] rounded-[100vw]  borderstyle`}
     >
       <div className="flex overflow-hidden relative w-full h-full bg-black items-center justify-center rounded-[100vw]">

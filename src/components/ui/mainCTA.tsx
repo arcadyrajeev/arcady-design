@@ -25,7 +25,7 @@ const MainCTA: React.FC<ctaProps> = ({
     >
       <div
         aria-hidden="true"
-        className={` ${bullet} absolute z-0 left-[10%]  rounded-[50%] bg-accent-foreground group-hover:w-150 group-hover:h-100 group-hover:-translate-x-20 transition-all duration-400 ease-in-out`}
+        className={` ${bullet} absolute z-0 left-[10%]  rounded-[50%] bg-accent-foreground group-hover:w-150 group-hover:h-150 group-hover:-translate-x-20 transition-all duration-400 ease-in-out`}
       ></div>{" "}
       <span
         className={`${fontSize} z-5 fontcaps translate-x-1 text-accent-foreground group-hover:text-foreground group-hover:-translate-x-[20%] transition-all duration-300 ease-in-out`}
