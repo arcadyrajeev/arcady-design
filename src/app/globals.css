@@ -218,3 +218,17 @@ body,
     sans-serif;
   font-weight: 400;
 }
+
+.gradient-back {
+  background: 
+    /* Radial glow */ radial-gradient(
+      circle at bottom center,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 80%,
+      rgba(255, 255, 255, 0.9) 84%,
+      rgba(160, 100, 255, 0.6) 86%,
+
+      rgb(24, 18, 53) 88%
+    ),
+    /* Dark base */ #0d0d1a;
+}

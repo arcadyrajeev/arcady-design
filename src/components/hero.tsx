@@ -38,7 +38,7 @@ const Hero = () => {
               bullet="w-3 h-3"
               icon={40}
             />
-            <p className="fontbody text-[1.2rem] xl:text-[0.5rem] text-background-primary tracking-wide pl-5 pt-2">
+            <p className="fontbody text-[1.2rem] xl:text-[0.8rem] text-background-primary tracking-wide pl-5 pt-2">
               Transform your Platform with us
             </p>
           </div>

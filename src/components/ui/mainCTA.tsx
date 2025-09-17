@@ -21,7 +21,7 @@ const MainCTA: React.FC<ctaProps> = ({
   return (
     <Link
       href={destination}
-      className={`${size}  group flex relative overflow-hidden px-2 rounded-[100vw] justify-center items-center  hover:border-2  bg-accent`}
+      className={`${size}  group flex relative overflow-hidden px-2 rounded-[100vw] justify-center items-center  hover:border-2  bg-accent  `}
     >
       <div
         aria-hidden="true"
