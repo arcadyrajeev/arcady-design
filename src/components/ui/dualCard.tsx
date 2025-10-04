@@ -70,7 +70,7 @@ const DualCard: React.FC<cardProps> = ({
           </p>
 
           {/* CTA */}
-          <div className="w-fit h-fit mt-auto bg-red-500">
+          <div className="w-fit h-fit mt-auto ">
             <MainCTA
               label="EXPLORE MORE"
               destination={buttonlink}
