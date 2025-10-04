@@ -11,37 +11,71 @@ interface cardProps {
 
 const DualCard: React.FC<cardProps> = ({
   imgLink = "/",
-  title = "CARD TItle",
-  desc = "card desription",
+  title = "CARD Title",
+  desc = "Card description",
   orientation = "xl:flex-row",
   buttonlink = "/",
 }) => {
   return (
     <div
-      className={` flex  ${orientation} flex-col sticky top-[10%] w-full h-[82dvh]  bg-background-primary rounded-4xl p-2 `}
+      className={`flex ${orientation} flex-col sticky top-[6%] lg:top-[10%] 
+                  w-full h-[88dvh] bg-background-primary rounded-4xl 
+                  p-2 `}
     >
-      <div className="relative overflow-hidden w-full h-[55%] xl:w-[45%] flex xl:h-full bg-gray-300 rounded-3xl">
+      {/* Image Section */}
+      <div
+        className="relative overflow-hidden 
+                      w-full  
+                       landscape:h-full  portrait:h-[50%] landscape:w-[45%] portrait:w-full
+                      bg-gray-300 rounded-3xl"
+      >
         <Image
           src={imgLink}
-          alt="Hero illustration"
-          width={400}
-          height={400}
-          priority // ensures eager loading for above-the-fold images
-          className="absolute  z-0 object-cover object-center w-[100%] h-[100%]"
+          alt="Card illustration"
+          width={800}
+          height={800}
+          priority
+          className="absolute z-0 object-cover object-center w-full h-full"
         />
       </div>
-      <div className="flex  w-full h-[42%] xl:w-[55%] xl:h-full items-center justify-center ">
-        <div className="flex flex-col w-[88%] h-full py-15 px-5 gap-10">
-          <h1 className="fontheading text-[4rem] leading-20">{title}</h1>
-          <p className="w-[88%] text-justify fontbody1 text-[1.2rem] xl:text-[0.9rem] leading-7">
+
+      {/* Text Section */}
+      <div
+        className="flex landscape:w-[55%] portrait:w-full 
+                      items-center justify-center"
+      >
+        <div
+          className="flex flex-col 
+                        w-[90%] sm:w-[88%] 
+                        h-full py-8 md:py-12 lg:py-15 
+                        px-3 sm:px-5 gap-3 sm:gap-8 md:gap-10"
+        >
+          {/* Title */}
+          <h1
+            className="fontheading 
+                         text-[2rem] sm:text-[2.6rem] md:text-[3.2rem] lg:text-[7vh] xl:text-[4rem] 
+                         leading-tight md:leading-[1.1] lg:leading-[1.2] xl:leading-20"
+          >
+            {title}
+          </h1>
+
+          {/* Description */}
+          <p
+            className="w-full sm:w-[90%] 
+                        text-justify fontbody1 
+                        text-[0.8rem] sm:text-[1.1rem] md:text-[1.2rem] lg:text-[2.4vh] xl:text-[0.9rem] 
+                        leading-6 sm:leading-7 md:leading-8 lg:leading-[3.6vh] xl:leading-7"
+          >
             {desc}
           </p>
-          <div className="w-fit h-fit mt-auto ">
+
+          {/* CTA */}
+          <div className="w-fit h-fit mt-auto">
             <MainCTA
               label="EXPLORE MORE"
               destination={buttonlink}
-              size="w-50 h-15"
-              fontSize="text-[1rem]"
+              size="w-40 sm:w-44 md:w-48 lg:w-50 h-12 sm:h-13 md:h-14 lg:h-15"
+              fontSize="text-[0.9rem] sm:text-[1rem] md:text-[1.05rem] lg:text-[1rem]"
               bullet="w-2 h-2"
             />
           </div>
