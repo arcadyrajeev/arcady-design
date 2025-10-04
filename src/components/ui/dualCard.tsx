@@ -63,7 +63,7 @@ const DualCard: React.FC<cardProps> = ({
           <p
             className="w-full sm:w-[90%] 
                         text-justify fontbody1 
-                        text-[0.8rem] sm:text-[1.1rem] md:text-[1.2rem] portrait:lg:text-[2vh] lg:text-[2.4vh] xl:text-[0.9rem] 
+                        text-[1rem] sm:text-[1.1rem] md:text-[1.2rem] portrait:lg:text-[2vh] lg:text-[2.4vh] xl:text-[0.9rem] 
                         leading-6 sm:leading-7 md:leading-8 lg:leading-[3.6vh] xl:leading-7"
           >
             {desc}
