@@ -41,7 +41,7 @@ const DualCard: React.FC<cardProps> = ({
 
       {/* Text Section */}
       <div
-        className="flex landscape:w-[55%] portrait:w-full 
+        className="flex landscape:w-[55%] portrait:w-full portrait:h-[50%]
                       items-center justify-center"
       >
         <div
@@ -53,7 +53,7 @@ const DualCard: React.FC<cardProps> = ({
           {/* Title */}
           <h1
             className="fontheading 
-                         text-[2rem] sm:text-[2.6rem] md:text-[3.2rem] lg:text-[7vh] xl:text-[4rem] 
+                         text-[2rem] sm:text-[2.6rem] md:text-[3.2rem] portrait:lg:text-[4vh] lg:text-[7vh] xl:text-[4rem] 
                          leading-tight md:leading-[1.1] lg:leading-[1.2] xl:leading-20"
           >
             {title}
@@ -63,14 +63,14 @@ const DualCard: React.FC<cardProps> = ({
           <p
             className="w-full sm:w-[90%] 
                         text-justify fontbody1 
-                        text-[0.8rem] sm:text-[1.1rem] md:text-[1.2rem] lg:text-[2.4vh] xl:text-[0.9rem] 
+                        text-[0.8rem] sm:text-[1.1rem] md:text-[1.2rem] portrait:lg:text-[2vh] lg:text-[2.4vh] xl:text-[0.9rem] 
                         leading-6 sm:leading-7 md:leading-8 lg:leading-[3.6vh] xl:leading-7"
           >
             {desc}
           </p>
 
           {/* CTA */}
-          <div className="w-fit h-fit mt-auto">
+          <div className="w-fit h-fit mt-auto bg-red-500">
             <MainCTA
               label="EXPLORE MORE"
               destination={buttonlink}
