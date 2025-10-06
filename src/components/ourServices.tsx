@@ -15,13 +15,6 @@ const services = [
     orientation: "landscape:flex-row-reverse",
     link: "/website",
   },
-  {
-    imgLink: "/images/user1.png",
-    title: "Performance Optimization",
-    desc: "We optimise websites and apps for speed, scalability, and seamless user experience. Faster load times, smoother journeys, and stronger results, turning underperforming products into high-performance experiences.",
-    orientation: "landscape:flex-row",
-    link: "/userEx",
-  },
 
   {
     imgLink: "/images/product.png",
@@ -36,13 +29,6 @@ const services = [
     desc: "Clear messaging builds trust. We craft landing pages, campaign assets, and investor decks that simplify complex fintech ideas, attract customers, and communicate value effortlessly.",
     orientation: "landscape:flex-row",
     link: "/marketing",
-  },
-  {
-    imgLink: "/images/user.png",
-    title: "User Experience & Flow",
-    desc: "We design user journeys that make financial products seamless. Every interaction is optimized to reduce friction, build trust, and keep customers engaged for the long term.",
-    orientation: "landscape:flex-row-reverse",
-    link: "/userEx",
   },
 ];
 
